@@ -5,13 +5,13 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 const staticRoutes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/index'
+    redirect: '/layout'
   },
   {
-    path: '/404',
-    name: 'PageNotFound',
-    component: () => import('@/views/404.vue')
-  },
+    path: '/layout',
+    name: 'BaseLayout',
+    component: () => import('@/layouts/index.vue')
+  }
 ]
 
 // 创建路由实例

@@ -2,7 +2,6 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import electron from 'vite-plugin-electron'
 import { resolve } from 'path'
-import svgLoader from 'vite-svg-loader'
 
 const pathResolve = (dir: string): any => {
   return resolve(__dirname, '.', dir)
@@ -12,7 +11,6 @@ const pathResolve = (dir: string): any => {
 export default defineConfig({
   plugins: [
     vue(),
-    svgLoader(),
     electron([
       {
         entry: './electron/main.ts'

@@ -1,5 +1,4 @@
 import { ipcRenderer, contextBridge } from 'electron'
-import * as api from './api'
 
 contextBridge.exposeInMainWorld('windowClose', () => {
   ipcRenderer.send('window-close')

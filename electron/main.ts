@@ -1,6 +1,5 @@
 import { app, BrowserWindow, ipcMain } from 'electron'
 import { join } from 'path'
-import * as api from './api'
 
 // 关闭安全警告
 process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true'
