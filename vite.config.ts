@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import electron from 'vite-plugin-electron'
 import { resolve } from 'path'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
 const pathResolve = (dir: string): any => {
   return resolve(__dirname, '.', dir)
@@ -18,7 +19,10 @@ export default defineConfig({
       {
         entry: './electron/preload.ts'
       }
-    ])
+    ]),
+    createSvgIconsPlugin({
+      iconDirs: [resolve(process.cwd(), 'src/assets/svg')]
+    })
   ],
   server: {
     host: '0.0.0.0'

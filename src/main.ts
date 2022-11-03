@@ -5,6 +5,7 @@ import router from './router'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import pinia from './store'
+import 'virtual:svg-icons-register'
 
 const app = createApp(App)
 app.use(ElementPlus)
